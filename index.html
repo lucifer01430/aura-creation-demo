@@ -35,6 +35,19 @@
   <script src="js/interactions.js" defer></script>
 </head>
 <body>
+  <!-- 1. Luxury Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-ring"></div>
+        <img src="assets/images/logo-192.webp" width="96" height="96" alt="" class="preloader-logo">
+      </div>
+      <p class="preloader-brand">Aura Creations</p>
+      <p class="preloader-signature">by Rashi &amp; Puneeta</p>
+      <div class="preloader-bar"><span class="preloader-progress"></span></div>
+    </div>
+  </div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Inline icon sprite -->
@@ -197,10 +210,25 @@
             <span class="collection-media"><img class="media-img" src="https://images.unsplash.com/photo-1763336016192-c7b62602e993?auto=format&amp;fit=crop&amp;q=70&amp;w=800" srcset="https://images.unsplash.com/photo-1763336016192-c7b62602e993?auto=format&amp;fit=crop&amp;q=70&amp;w=480 480w, https://images.unsplash.com/photo-1763336016192-c7b62602e993?auto=format&amp;fit=crop&amp;q=70&amp;w=800 800w, https://images.unsplash.com/photo-1763336016192-c7b62602e993?auto=format&amp;fit=crop&amp;q=70&amp;w=1200 1200w, https://images.unsplash.com/photo-1763336016192-c7b62602e993?auto=format&amp;fit=crop&amp;q=70&amp;w=1600 1600w" sizes="(min-width: 900px) 50vw, 90vw" width="1400" height="1000" loading="lazy" decoding="async" alt="A woman in an elegant dress seated on a sofa"></span>
             <span class="collection-text"><span class="collection-title">Indo-Western</span><span class="collection-blurb">Co-ord sets, fusion silhouettes and party wear</span><span class="collection-explore">Explore <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
           </a>
-          <p class="collection-note reveal">
-            <span>Choose a collection to see its pieces in the catalogue below.</span>
-            <span class="signature" aria-hidden="true">Where elegance meets comfort</span>
-          </p>
+          <div class="collection-note collection-highlight reveal">
+            <span class="highlight-eyebrow">
+              <svg class="icon" aria-hidden="true"><use href="#i-gem"/></svg>
+              <span>Jankipuram Boutique</span>
+            </span>
+            <h3 class="highlight-title">Crafted for Every Celebration</h3>
+            <p class="highlight-desc">From handcrafted festive suits to contemporary indo-western co-ords, every piece in our collection is chosen for breathable comfort, rich textures, and timeless charm.</p>
+            <ul class="highlight-features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-hanger"/></svg> Custom Tailoring &amp; Alterations</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg> Handpicked Silks, Muslins &amp; Georgettes</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg> Personal In-Store Styling &amp; Trial</li>
+            </ul>
+            <div class="highlight-foot">
+              <a class="btn btn-dark btn-small" href="#catalogue">
+                View All Outfits <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+              <span class="signature" aria-hidden="true">Where elegance meets comfort</span>
+            </div>
+          </div>
           <a class="collection-card collection-card--offset" href="#catalogue" data-filter-link="new">
             <span class="collection-media"><img class="media-img" src="https://images.unsplash.com/photo-1780504863283-3157e6d141e1?auto=format&amp;fit=crop&amp;q=70&amp;w=800" srcset="https://images.unsplash.com/photo-1780504863283-3157e6d141e1?auto=format&amp;fit=crop&amp;q=70&amp;w=480 480w, https://images.unsplash.com/photo-1780504863283-3157e6d141e1?auto=format&amp;fit=crop&amp;q=70&amp;w=800 800w, https://images.unsplash.com/photo-1780504863283-3157e6d141e1?auto=format&amp;fit=crop&amp;q=70&amp;w=1200 1200w, https://images.unsplash.com/photo-1780504863283-3157e6d141e1?auto=format&amp;fit=crop&amp;q=70&amp;w=1600 1600w" sizes="(min-width: 900px) 26vw, 90vw" width="900" height="1100" loading="lazy" decoding="async" alt="A woman in a pink traditional outfit walking with a white bag"></span>
             <span class="collection-text"><span class="collection-title">New Arrivals</span><span class="collection-blurb">The latest pieces to reach the boutique</span><span class="collection-explore">Explore <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
@@ -249,7 +277,36 @@
         <div class="edit-copy">
           <h2 class="display-2 reveal" id="edit-title">Tradition, worn your way.</h2>
           <p class="body-lg reveal">Ethnic suits, festive wear, co-ord sets and party wear, chosen to move easily from everyday plans to the occasions you dress up for.</p>
-          <a class="text-link text-link--underline reveal" href="#catalogue">See the collection <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          
+          <div class="edit-features reveal">
+            <div class="edit-feature-item">
+              <span class="edit-feature-num">01</span>
+              <div>
+                <h3 class="edit-feature-heading">Handpicked Fabric Selection</h3>
+                <p class="edit-feature-text">Breathable muslins, pure georgettes, and rich chanderi silks tailored for all-day comfort.</p>
+              </div>
+            </div>
+            <div class="edit-feature-item">
+              <span class="edit-feature-num">02</span>
+              <div>
+                <h3 class="edit-feature-heading">Timeless Lucknow Heritage</h3>
+                <p class="edit-feature-text">Classic elegance thoughtfully modernized with contemporary cuts and versatile silhouettes.</p>
+              </div>
+            </div>
+            <div class="edit-feature-item">
+              <span class="edit-feature-num">03</span>
+              <div>
+                <h3 class="edit-feature-heading">Made For Every Celebration</h3>
+                <p class="edit-feature-text">From intimate family dinners to festive celebrations, styles crafted to celebrate you.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="edit-actions reveal">
+            <a class="btn btn-dark" href="#catalogue">Explore collection <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-quiet" href="#visit">Visit boutique</a>
+          </div>
+
           <div class="frame frame-detail reveal">
             <img class="media-img" src="https://images.unsplash.com/photo-1786596552096-c782a23e00b3?auto=format&amp;fit=crop&amp;q=70&amp;w=800" srcset="https://images.unsplash.com/photo-1786596552096-c782a23e00b3?auto=format&amp;fit=crop&amp;q=70&amp;w=480 480w, https://images.unsplash.com/photo-1786596552096-c782a23e00b3?auto=format&amp;fit=crop&amp;q=70&amp;w=800 800w, https://images.unsplash.com/photo-1786596552096-c782a23e00b3?auto=format&amp;fit=crop&amp;q=70&amp;w=1200 1200w, https://images.unsplash.com/photo-1786596552096-c782a23e00b3?auto=format&amp;fit=crop&amp;q=70&amp;w=1600 1600w" sizes="(min-width: 900px) 22vw, 60vw" width="900" height="1100" loading="lazy" decoding="async" alt="Three women in traditional clothing on a stone bench in a courtyard">
           </div>
@@ -291,34 +348,110 @@
       </div>
     </section>
 
-    <!-- J · Visit -->
+    <!-- J · Visit & Contact -->
     <section class="visit section" id="visit" aria-labelledby="visit-title">
-      <div class="container visit-grid">
-        <div class="visit-place" aria-hidden="true">
-          <span class="visit-place-line">Jankipuram</span>
-          <span class="visit-place-line">Extension</span>
-        </div>
-        <div class="visit-card">
-          <h2 class="display-3" id="visit-title">Visit the boutique.</h2>
-          <p class="body-lg">Come and see the pieces in person, try them on and find your fit.</p>
-          <address class="visit-address">
-            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
-            <span>
-              <span data-loc-landmark>Opposite Lenskart, in front of Krishna Ply, 60 Ft Road</span><br>
-              <span data-loc-area>Jankipuram Extension</span>, <span data-loc-city>Lucknow, Uttar Pradesh, India</span>
-            </span>
-          </address>
-          <p class="visit-phone" data-phone-row>WhatsApp <a href="https://wa.me/916391390145" target="_blank" rel="noopener" data-wa-link data-phone-display>+91 63913 90145</a></p>
-          <p class="fine-print">Message on WhatsApp to confirm timings before you visit.</p>
-          <div class="visit-actions">
-            <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Opposite%20Lenskart%2C%20Krishna%20Ply%2C%2060%20Feet%20Road%2C%20Jankipuram%20Extension%2C%20Lucknow%2C%20Uttar%20Pradesh" target="_blank" rel="noopener" data-maps-link>
-              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Get directions
-            </a>
-            <a class="btn btn-quiet" href="https://wa.me/916391390145" target="_blank" rel="noopener" data-open-enquiry data-wa-link>
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp
-            </a>
+      <div class="container">
+        
+        <div class="visit-grid">
+          <div class="visit-info-col">
+            <div class="visit-place" aria-hidden="true">
+              <span class="visit-place-line">Jankipuram</span>
+              <span class="visit-place-line">Extension</span>
+            </div>
+            <div class="visit-card">
+              <h2 class="display-3" id="visit-title">Visit the boutique.</h2>
+              <p class="body-lg">Come and see the pieces in person, try them on and find your fit.</p>
+              <address class="visit-address">
+                <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                <span>
+                  <span data-loc-landmark>Opposite Lenskart, in front of Krishna Ply, 60 Ft Road</span><br>
+                  <span data-loc-area>Jankipuram Extension</span>, <span data-loc-city>Lucknow, Uttar Pradesh, India</span>
+                </span>
+              </address>
+              <div class="visit-timings">
+                <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+                <div>
+                  <strong>Boutique Timings:</strong><br>
+                  <span>Mon – Sat: 11:00 AM – 8:30 PM &bull; Sun: By Appointment</span>
+                </div>
+              </div>
+              <p class="visit-phone" data-phone-row>WhatsApp <a href="https://wa.me/916391390145" target="_blank" rel="noopener" data-wa-link data-phone-display>+91 63913 90145</a></p>
+              <div class="visit-actions">
+                <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Opposite%20Lenskart%2C%20Krishna%20Ply%2C%2060%20Feet%20Road%2C%20Jankipuram%20Extension%2C%20Lucknow%2C%20Uttar%20Pradesh" target="_blank" rel="noopener" data-maps-link>
+                  <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Get directions
+                </a>
+                <a class="btn btn-quiet" href="https://wa.me/916391390145" target="_blank" rel="noopener" data-open-enquiry data-wa-link>
+                  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Enquire on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sweet Contact Form -->
+          <div class="visit-contact-col">
+            <div class="contact-box reveal">
+              <div class="contact-box-header">
+                <span class="contact-badge"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg> Direct Connect</span>
+                <h3 class="contact-box-title">Get in Touch</h3>
+                <p class="contact-box-sub">Have a question about fabric, custom fitting, or want to schedule a visit? Send us a quick message.</p>
+              </div>
+
+              <form class="boutique-form" id="contact-form" data-inline-contact>
+                <div class="form-row-duo">
+                  <div class="field-item">
+                    <label for="c-name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="c-name" name="name" placeholder="e.g. Ananya Singh" required autocomplete="name">
+                  </div>
+                  <div class="field-item">
+                    <label for="c-phone">WhatsApp Number <span class="required">*</span></label>
+                    <input type="tel" id="c-phone" name="phone" placeholder="e.g. 9876543210" required autocomplete="tel">
+                  </div>
+                </div>
+
+                <div class="field-item">
+                  <label for="c-interest">Interested In</label>
+                  <select id="c-interest" name="interest">
+                    <option value="Ethnic Suits &amp; Kurta Sets">Ethnic Suits &amp; Kurta Sets</option>
+                    <option value="Indo-Western &amp; Co-ords">Indo-Western &amp; Co-ords</option>
+                    <option value="Festive &amp; Party Wear">Festive &amp; Party Wear</option>
+                    <option value="Custom Sizing / Boutique Visit">Custom Sizing / Boutique Visit</option>
+                    <option value="General Enquiry">General Enquiry</option>
+                  </select>
+                </div>
+
+                <div class="field-item">
+                  <label for="c-message">Your Message / Preferred Visit Date</label>
+                  <textarea id="c-message" name="message" rows="3" placeholder="Tell us what style you're looking for or your visit date..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-block">
+                  <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Send Message on WhatsApp
+                </button>
+                <p class="form-hint">Opens directly in WhatsApp with your details ready to send.</p>
+              </form>
+            </div>
           </div>
         </div>
+
+        <!-- Google Map Embedded -->
+        <div class="visit-map-section reveal">
+          <div class="visit-map-header">
+            <div class="map-heading-group">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <div>
+                <h3 class="map-heading">Aura Creations Boutique on Google Maps</h3>
+                <p class="map-sub">Opposite Lenskart, in front of Krishna Ply, 60 Ft Road, Jankipuram Extension, Lucknow</p>
+              </div>
+            </div>
+            <a class="btn btn-quiet btn-small" href="https://maps.google.com/?q=Aura+Creations+Jankipuram+Extension+Lucknow" target="_blank" rel="noopener">
+              Open Full Map <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="visit-map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.1848403610265!2d80.9422839757984!3d26.92935405937449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995713955fcdcb%3A0xe71bab550d05470b!2sAura%20Creations!5e0!3m2!1sen!2sin!4v1793259311735!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -342,27 +475,48 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="assets/images/logo-192.webp" width="192" height="192" alt="Aura Creation by Rashi &amp; Puneeta logo" loading="lazy">
-        <p data-footer-description>Ethnic and Indo-Western wear for everyday elegance and special moments, by Rashi &amp; Puneeta.</p>
+        <div class="footer-logo-wrap">
+          <img src="assets/images/logo-192.webp" width="192" height="192" alt="Aura Creation by Rashi &amp; Puneeta logo" loading="lazy">
+        </div>
+        <p data-footer-description>Ethnic and Indo-Western wear for everyday elegance and special celebrations, by Rashi &amp; Puneeta.</p>
+        <p class="signature footer-signature" aria-hidden="true">Where elegance meets comfort</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <h2 class="footer-heading">Explore</h2>
+
+      <nav class="footer-nav" aria-label="Footer Collections">
+        <h2 class="footer-heading">Collections</h2>
         <ul>
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="#catalogue">The collection</a></li>
-          <li><a href="#story">Our story</a></li>
-          <li><a href="#visit">Visit us</a></li>
+          <li><a href="#catalogue" data-filter-link="ethnic">Ethnic Wear</a></li>
+          <li><a href="#catalogue" data-filter-link="indo-western">Indo-Western</a></li>
+          <li><a href="#catalogue" data-filter-link="new">New Arrivals</a></li>
+          <li><a href="#collections">Browse Categories</a></li>
+          <li><a href="#story">Our Design Story</a></li>
         </ul>
       </nav>
+
+      <div class="footer-boutique">
+        <h2 class="footer-heading">Boutique &amp; Hours</h2>
+        <address class="footer-address">
+          <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+          <span>Opposite Lenskart, in front of Krishna Ply, 60 Ft Road, <span data-loc-area>Jankipuram Extension</span>, Lucknow</span>
+        </address>
+        <div class="footer-timings">
+          <span class="timings-title">Open Days:</span>
+          <span>Mon – Sat: 11:00 AM – 8:30 PM</span>
+          <span class="timings-sub">Sundays: By WhatsApp Appointment</span>
+        </div>
+      </div>
+
       <div class="footer-contact">
-        <h2 class="footer-heading">Find us</h2>
-        <p><span data-loc-area>Jankipuram Extension</span>, Lucknow</p>
-        <p><a href="https://wa.me/916391390145" target="_blank" rel="noopener" data-wa-link><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> WhatsApp enquiries</a></p>
-        <p><a href="https://www.instagram.com/auracreations02/" target="_blank" rel="noopener" data-instagram-link><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg> <span data-instagram-handle>@auracreations02</span></a></p>
+        <h2 class="footer-heading">Connect With Us</h2>
+        <p class="footer-contact-link"><a href="https://wa.me/916391390145" target="_blank" rel="noopener" data-wa-link><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> <span>+91 63913 90145</span></a></p>
+        <p class="footer-contact-link"><a href="https://www.instagram.com/auracreations02/" target="_blank" rel="noopener" data-instagram-link><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg> <span data-instagram-handle>@auracreations02</span></a></p>
+        <a class="btn btn-outline-light btn-small footer-cta-btn" href="https://wa.me/916391390145" target="_blank" rel="noopener" data-wa-link>
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Chat on WhatsApp
+        </a>
       </div>
     </div>
     <div class="container footer-base">
-      <p>&copy; <span data-year>2026</span> Aura Creations by Rashi &amp; Puneeta</p>
+      <p>&copy; <span data-year>2026</span> Aura Creations by Rashi &amp; Puneeta &bull; Jankipuram Extension, Lucknow</p>
       <!-- CONCEPT NOTICE: remove this paragraph (or set config.demo.isDemo = false) once the owners approve publication. -->
       <p class="concept-notice" data-concept-notice>Independent website concept by StackShooter — not an official Aura Creations website. Sample photography via Unsplash.</p>
     </div>

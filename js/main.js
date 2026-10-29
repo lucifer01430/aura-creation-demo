@@ -699,6 +699,53 @@
     });
   }
 
+  /* ============================================================= preloader */
+  function setupPreloader() {
+    var pl = document.getElementById('preloader');
+    if (!pl) return;
+    var hidden = false;
+    function dismiss() {
+      if (hidden) return;
+      hidden = true;
+      pl.classList.add('is-hidden');
+      setTimeout(function () {
+        if (pl && pl.parentNode) pl.parentNode.removeChild(pl);
+      }, 800);
+    }
+    // Dismiss shortly after full window load, with safety fallback
+    if (document.readyState === 'complete') {
+      setTimeout(dismiss, 500);
+    } else {
+      window.addEventListener('load', function () {
+        setTimeout(dismiss, 500);
+      });
+      setTimeout(dismiss, 2400); // Safety fallback so preloader never blocks
+    }
+  }
+
+  /* =================================================== inline contact form */
+  function setupInlineContactForm() {
+    var form = document.querySelector('[data-inline-contact]');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = (form.elements.name ? form.elements.name.value : '').trim();
+      var phone = (form.elements.phone ? form.elements.phone.value : '').trim();
+      var interest = (form.elements.interest ? form.elements.interest.value : '').trim();
+      var msg = (form.elements.message ? form.elements.message.value : '').trim();
+
+      var brand = (cfg.brand && cfg.brand.name) || 'Aura Creations';
+      var lines = ['Hello ' + brand + '!'];
+      if (name) lines.push('My name is ' + name + '.');
+      if (phone) lines.push('Contact number: ' + phone + '.');
+      if (interest) lines.push('I am interested in: ' + interest + '.');
+      if (msg) lines.push('Message: ' + msg);
+
+      whatsapp.open(lines.join('\n'));
+      form.reset();
+    });
+  }
+
   /* ============================================ global enquiry triggers */
   function setupEnquiryTriggers() {
     document.addEventListener('click', function (e) {
@@ -712,12 +759,14 @@
 
   /* =================================================================== init */
   function init() {
+    setupPreloader();
     hydrate();
     setupProductDialog();
     setupEnquiryDialog();
     setupCatalogue();
     setupMenu();
     setupEnquiryTriggers();
+    setupInlineContactForm();
     checkExistingImages();
     window.addEventListener('load', checkExistingImages);
   }
