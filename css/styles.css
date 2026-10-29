@@ -221,7 +221,8 @@ address { font-style: normal; }
 .hero-title {
   font-family: var(--serif);
   font-weight: 400;
-  font-optical-sizing: auto;
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 11;
   letter-spacing: -0.015em;
   color: var(--espresso);
 }
@@ -444,6 +445,8 @@ address { font-style: normal; }
   padding: 14px 0;
   font-family: var(--serif);
   font-size: clamp(2rem, 9vw, 2.8rem);
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 11;
   line-height: 1.15;
   text-decoration: none;
   opacity: 0;
@@ -1023,6 +1026,8 @@ address { font-style: normal; }
 .tile-serif {
   font-family: var(--serif);
   font-size: clamp(1.5rem, 3vw, 2.6rem);
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 11;
   line-height: 1.05;
 }
 .tile-handle {
@@ -1052,6 +1057,8 @@ address { font-style: normal; }
   display: grid;
   font-family: var(--serif);
   font-size: clamp(3.4rem, 9.6vw, 9.4rem);
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 11;
   line-height: 0.92;
   letter-spacing: -0.03em;
   color: var(--espresso);
