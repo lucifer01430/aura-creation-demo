@@ -925,16 +925,67 @@ address { font-style: normal; }
 }
 
 @media (max-width: 899px) {
-  .collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; }
-  .collection-note { grid-column: 1 / -1; grid-row: auto; padding: 0; order: -1; }
-  .collection-note .signature { display: none; }
-  .collection-card--arch { grid-column: 1 / -1; grid-row: auto; min-height: 0; aspect-ratio: 4 / 4.6; max-height: 640px; }
-  .collection-card--wide { grid-column: 1; grid-row: auto; aspect-ratio: 3 / 4; }
-  .collection-card--offset { grid-column: 2; grid-row: auto; aspect-ratio: 3 / 4; margin-top: 40px; }
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    gap: 20px;
+  }
+  .collection-card--arch {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 4.6;
+    max-height: 580px;
+  }
+  .collection-card--wide {
+    grid-column: 1;
+    grid-row: auto;
+    aspect-ratio: 3 / 4;
+  }
+  .collection-card--offset {
+    grid-column: 2;
+    grid-row: auto;
+    aspect-ratio: 3 / 4;
+    margin-top: 24px;
+  }
   .collection-card--wide .collection-title,
   .collection-card--offset .collection-title { font-size: 1.45rem; }
   .collection-card--wide .collection-blurb,
   .collection-card--offset .collection-blurb { display: none; }
+
+  .collection-note {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    order: 3;
+    margin-top: 16px;
+    padding: clamp(20px, 4vw, 28px);
+    box-shadow: 0 4px 16px rgba(48, 35, 31, 0.05);
+  }
+  .collection-note .signature { display: block; font-size: 1.4rem; }
+}
+
+@media (max-width: 599px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .collection-card--wide,
+  .collection-card--offset {
+    grid-column: 1;
+    aspect-ratio: 4 / 3.4;
+    margin-top: 0;
+  }
+  .collection-card--wide .collection-blurb,
+  .collection-card--offset .collection-blurb { display: block; }
+  .collection-note {
+    margin-top: 10px;
+    padding: 20px 16px;
+  }
+  .highlight-title { font-size: 1.3rem; }
+  .highlight-features { padding: 8px 0; gap: 8px; }
+  .highlight-features li { font-size: 0.8125rem; }
+  .highlight-foot { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .highlight-foot .btn { width: 100%; justify-content: center; }
 }
 
 /* 10. Catalogue ------------------------------------------------------------ */
@@ -1175,10 +1226,25 @@ address { font-style: normal; }
 }
 
 @media (max-width: 899px) {
-  .edit-grid { grid-template-columns: 1fr; }
+  .edit-grid { grid-template-columns: 1fr; gap: 32px; }
   .edit-main { margin-inline: calc(var(--gutter) * -1); }
   .edit-caption { padding-inline: var(--gutter); }
-  .frame-detail { width: 58%; margin-top: 12px; }
+  .edit-copy { padding-top: 0; gap: 20px; }
+  .edit-features { gap: 14px; padding-block: 14px; }
+  .edit-feature-item { gap: 12px; }
+  .edit-actions { width: 100%; }
+  .edit-actions .btn { flex: 1 1 auto; justify-content: center; min-width: 140px; }
+  .frame-detail {
+    width: 68%;
+    max-width: 300px;
+    align-self: center;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .edit-actions { flex-direction: column; }
+  .edit-actions .btn { width: 100%; }
+  .frame-detail { width: 80%; }
 }
 
 /* 12. Instagram ------------------------------------------------------------ */
@@ -1456,11 +1522,27 @@ address { font-style: normal; }
 }
 
 @media (max-width: 899px) {
-  .visit-grid { grid-template-columns: 1fr; }
-  .visit-place { font-size: clamp(2.8rem, 12vw, 4.6rem); }
+  .visit-grid { grid-template-columns: 1fr; gap: 32px; }
+  .visit-place { font-size: clamp(2.6rem, 11vw, 4.2rem); }
+  .visit-card,
+  .contact-box { padding: clamp(20px, 4.5vw, 32px); }
+  .visit-map-section { margin-top: 36px; }
+  .visit-map-header {
+    padding: 16px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .visit-map-header .btn { width: 100%; justify-content: center; }
+  .visit-map-embed iframe { height: 350px; }
 }
-@media (max-width: 420px) {
-  .visit-actions .btn { width: 100%; }
+@media (max-width: 520px) {
+  .form-row-duo { grid-template-columns: 1fr; gap: 12px; }
+  .boutique-form .btn { width: 100%; justify-content: center; }
+  .visit-actions { flex-direction: column; width: 100%; }
+  .visit-actions .btn { width: 100%; justify-content: center; }
+  .visit-map-embed iframe { height: 280px; }
+  .visit-timings { font-size: 0.875rem; }
 }
 
 /* 14. Final CTA & footer --------------------------------------------------- */
@@ -1576,11 +1658,15 @@ address { font-style: normal; }
 .concept-notice { max-width: 46em; }
 
 @media (max-width: 991px) {
-  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
   .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 540px) {
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-logo-wrap { width: 104px; height: 104px; }
+  .footer-brand img { width: 96px; height: 96px; }
+  .footer-base { flex-direction: column; gap: 12px; }
+  .footer-cta-btn { width: 100%; justify-content: center; }
 }
 
 /* 15. Floating WhatsApp ---------------------------------------------------- */
