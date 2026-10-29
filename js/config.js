@@ -56,7 +56,7 @@
     },
 
     // Public URL, once the site has one. Used for the canonical link and
-    // Open Graph URL. Leave empty while the site is a concept.
-    canonicalUrl: ''
+    // Open Graph URL.
+    canonicalUrl: 'https://aura-creations-demo.stackshooter.com/'
   };
 })();

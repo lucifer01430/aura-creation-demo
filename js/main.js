@@ -242,16 +242,23 @@
       note.hidden = false;
     }
 
-    // Canonical + og:url only when a genuine public URL is configured
+    // Canonical + og:url updated to match config if already present, or appended
     if (hasText(cfg.canonicalUrl)) {
-      var link = document.createElement('link');
-      link.rel = 'canonical';
+      var link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'canonical';
+        document.head.appendChild(link);
+      }
       link.href = cfg.canonicalUrl;
-      document.head.appendChild(link);
-      var og = document.createElement('meta');
-      og.setAttribute('property', 'og:url');
+
+      var og = document.querySelector('meta[property="og:url"]');
+      if (!og) {
+        og = document.createElement('meta');
+        og.setAttribute('property', 'og:url');
+        document.head.appendChild(og);
+      }
       og.content = cfg.canonicalUrl;
-      document.head.appendChild(og);
     }
   }
 
